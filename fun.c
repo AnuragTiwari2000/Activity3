@@ -4,7 +4,10 @@
 int name(char str[])
 {
     char *p=str;
-    int sum=0, length;
+    int sum=0, i,length;
+    printf("Hexadecimal values of each characters of given string: \n ");
+    while(str[i])
+         printf("%X\n ",str[i++]);
     length= strlen(str);
     int arr[length];
     for(int i=0; i<=length;i++)
