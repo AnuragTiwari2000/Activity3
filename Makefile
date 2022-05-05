@@ -20,7 +20,6 @@ Build : $(SRC)
 Run :Build	
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
 
-Build_Test:
-	gcc $()
+
 
 
