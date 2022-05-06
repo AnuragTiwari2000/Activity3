@@ -19,6 +19,15 @@ Build : $(SRC)
 
 Run :Build	
 	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+	
+Build_test : 
+	gcc $(TEST_SRC) $(INC) -o $(call FixPath,$(PROJ_NAME).$(EXEC)) -lm
+
+run_test : Build_test
+	./$(call FixPath,$(PROJ_NAME).$(EXEC))
+
+static_analysis:
+	cppcheck --enable=all $(SRC)
 
 
 
